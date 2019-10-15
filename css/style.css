@@ -1,0 +1,569 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+    font-size: 16px;
+    width: 960px;
+    margin: auto;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+/* トップのCSS */
+.top{ 
+   background-image: url(../img/top08.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 480px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top_title{
+    text-align: center;
+}
+
+/* TOPのテキストタイトルについて */
+.top h2{
+    font-weight: normal;
+}
+
+
+/* メニューについて */
+.menu{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background:whitesmoke;
+    border: 1px solid #efefef;
+}
+
+.menu-left{
+    margin-left: 20px;
+}
+
+
+.menu_right{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+
+nav{
+display:flex;
+justify-content:space-around;
+margin-right: 20px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    width: 20%;
+    min-width: 90px;
+    text-align: center;
+}
+
+nav ul li a{
+    color:black
+}
+
+nav ul li a:hover{
+    color:gray;
+}
+
+
+/* ABOUTについて */
+.about{
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.about_title{
+
+}
+
+.about_text{
+    margin: 20px 10px;
+}
+
+
+
+/* 主な活動内容 */
+.content{
+    text-align: center;
+}
+
+
+/* 画像のスライド */
+.content_slideloop{
+	background-image: url("../img/css.png");
+	background-position: 0px 0px;
+    background-size: auto 100%;
+	width: 960px;
+    height: 255px;
+    position: relative;
+	animation: leftSlide 20s linear infinite;
+	backface-visibility: hidden;
+    overflow: hidden;
+    margin: 20px;
+}
+/* アニメーションの設定 */
+@keyframes leftSlide {
+  0%    { background-position:0px 0px;  }
+  100%    { background-position:-1540px 0px;  }
+}
+
+.content_title img{
+widows: 50%;
+}
+
+/* 画像とテキストを交互にするレイアウト */
+
+.service{
+    margin-top: 40px;
+}
+
+
+.service_title h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service_text{
+    text-align: center;
+}
+
+.service_c{
+    display:flex;
+    background-color: #fafafa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ .service_img{
+    width:50%;
+}
+
+
+.service_content{
+    width: 50%;
+    margin: 20px 20px;
+    padding: 20px;
+
+}
+
+
+.service_img_pic img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    margin: 20px 20px;
+}
+
+.limit_day{
+    color:red;
+}
+
+
+
+
+/* 新着情報 */
+.new{
+    margin: auto;
+}
+
+.new_title{
+    text-align: center;
+margin: 30px 30px 30px 30px;
+}
+
+.fbpage{
+margin: auto;
+text-align: center;
+}
+
+
+
+/* Instagram */
+
+.instagramContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.listContainerBox{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
+}
+
+
+
+
+
+/* <!-- 福岡市キャンプ協会について --> */
+
+.information{
+    text-align: center;
+}
+
+
+.information_title{
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.information_text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.information_text_P{
+    text-align: left;
+}
+
+
+
+/* お問い合わせ */
+
+.contact_title{
+    margin: 20px 20px 20px 20px;
+    text-align: center;
+}
+
+
+.contact_tel{
+    display: flex;
+    border:solid 1px #bfbfbf;
+    margin: 0px 150px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact_line{
+    display: flex;
+    border:solid 1px #bfbfbf;
+    margin: 0px 150px;
+    text-align: left;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.contact_form{
+    /* display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column; */
+
+    color:red;
+    border:solid 1px #bfbfbf;
+    margin: 10px 150px;
+    text-align: left;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color:whitesmoke;
+}
+
+.contact_form_text{
+    color:black;
+}
+
+
+.contact_form_message{
+    display: flex;
+}
+
+
+.contact_form_message_text{
+    border:solid 1px #bfbfbf;
+    background-color:red;
+    width:100%;
+    padding: 20px 20px 20px 20px;
+    margin: 0px;
+    border-radius: 5px;
+    color:white;  
+}
+
+
+label.text{
+    color:black;
+}
+
+
+
+.black{
+    color:black;
+}
+
+.contact_form_input{
+    margin: 20px 0px;
+}
+
+.contact_form_input_field{
+    margin: 10px 5px;
+}
+
+
+.contact_form_input_field_input{
+    border:solid 1px #bfbfbf;
+    background-color:white;
+    width:100%;
+    padding: 5px;
+    border-radius: 5px;
+    color:black;
+}
+
+
+.contact_form_input_field_input_textarea{
+    border:solid 1px #bfbfbf;
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    color: black;
+
+}
+
+
+
+.tag-required{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 80%;
+    margin-right: 5px;
+
+}
+
+
+.tag-any{
+    background-color:green;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 80%;
+    margin-right: 5px;
+
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.form_btn{
+    text-align: center;
+    width: 30%;
+    background-color: blue;
+    color:white;
+    border-radius: 5px;
+    padding: 3px;
+
+}
+
+
+
+/* 上へ戻るボタン */
+button.back_top{
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	background: #707070;
+	font-size: 28px;
+	position: fixed;
+	right: 80px;
+	bottom: 80px;
+	cursor: pointer;
+}
+
+
+
+/* フッター */
+
+
+footer{
+    background-color:whitesmoke;
+    height: 250px;
+    margin-top: 70px;
+    color:#555353;
+    padding: 20px;
+}
+
+
+.footer_information{
+    display:flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer_information_text{
+    width: 50%;
+    margin: 10px 10px;
+    padding: 10px;
+
+}
+
+.footer_information_btn{
+    width: 50%;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+
+.footer_information_btn_btn{
+    text-align: center;
+    width: 80%;
+    background-color:green;
+    border-radius: 5px;
+    padding: 3px;   
+}
+
+
+.footer_information_btn_btn a{
+    color: white;
+}
+
+.copyrights{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 80%;
+}
+
+
+@media only screen and(max-width:600px){
+ 
+.top{
+    width;100%;
+}
+}
+
+
+/* じゃんけんの大枠 */
+.janken{
+    margin: 20px 150px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+
+
+
+.janken_title{
+        text-align: center;
+}
+
+
+/* スタートボタン */
+.janken_start_button{
+    text-align: center;
+    height:50px;
+    width: 50%;
+    background-color: blue;
+    color:white;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 80%;
+}
+
+
+/* 画像のスライド */
+.janken_slideloop{
+    display: none;
+	background-image: url("../img/janken.png");
+	background-position: 0px 0px;
+    background-size: auto 100%;
+	width: 500px;
+    height: 255px;
+    position: relative;
+	animation: leftSlide 1.0s linear infinite;
+	backface-visibility: hidden;
+    overflow: hidden;
+    margin: 20px;
+}
+/* アニメーションの設定 */
+@keyframes leftSlide {
+  0%    { background-position:0px 0px;  }
+  100%    { background-position:-1540px 0px;  }
+}
+
+
+
+/* コンピュータの出した手 */
+.janken_aite{
+    display: none;
+    text-align: center;
+}
+
+/* じゃんけんの結果 */
+.janken_judgment{
+    display: none;
+    text-align: center;
+}
+
+#judgment{
+    font-size: 40px;
+    color: red;
+
+}
+
+
+.janken_select_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+        #target {
+            width: 700px;
+            height: 300px;
+            margin: auto
+        }
+
