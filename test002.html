@@ -1,0 +1,34 @@
+<script>
+
+    jQuery(function ($) {
+        $(".contact_form_input").validate({
+            rules: {
+                Field1: {
+                    required: true
+                },
+                Field2: {
+                    number: true
+                },
+                Field3: {
+                    required: true,
+                    email: true
+                }
+            },
+
+            messages: {
+                Field1: {
+                    required: "必須項目です。入力をお願いします。"
+                },
+                Field2: {
+                    required: "数字のみ入力出来ます。"
+                },
+                Field3: {
+                    required: "必須項目です。入力をお願いします。",
+                    email: "Eメールの形式で入力して下さい。"
+                }
+            },
+
+        });
+    });
+
+</script>
